@@ -9,13 +9,13 @@
 </head>
 
 <body>
-        <nav id="nav">
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="html/formularioRegistro.html">Registrate para jugar.</a>
-                    </li>
-                </ul>
-            </nav>
+    <nav id="nav">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="formularioRegistro.html">Registrate para jugar.</a>
+            </li>
+        </ul>
+    </nav>
     <div class="contenedor">
         <div class="col-sm-4">
             <form onsubmit="return comprueba()" action="juego.html">
@@ -30,15 +30,15 @@
                 </div>
                 <p>La dificultad solo influye en el numero de enemigos</p>
                 <div style="position:relative; left:25%; margin-bottom:10px;" class="btn-group" id="grupo" role="group" aria-label="Basic example">
-                        <button type="button" onclick="dificultad('facil')" class="btn btn-secondary">Facil</button>
-                        <button type="button"  onclick="dificultad('normal')" class="btn btn-secondary">Normal</button>
-                        <button type="button"  onclick="dificultad('dificil')" class="btn btn-secondary">Dificil</button>
-                      </div>
+                    <button type="button" onclick="dificultad('facil')" class="btn btn-secondary">Facil</button>
+                    <button type="button" onclick="dificultad('normal')" class="btn btn-secondary">Normal</button>
+                    <button type="button" onclick="dificultad('dificil')" class="btn btn-secondary">Dificil</button>
+                </div>
                 <button type="submit" id="submit" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary btn-md btn-block">Jugar</button>
             </form>
         </div>
     </div>
-    
+
     <script src="../datos/datos.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">

@@ -70,13 +70,15 @@ function preload() {
     if(nivelactual==0){
         game.load.tilemap('map', '../assets/level1.csv');
     }
-     else{
-         if(nivelactual==1){
-             game.load.tilemap('map', '../assets/level2.csv');
-         }else{
-             game.load.tilemap('map', '../assets/level1.csv');
-         }
-     }
+    if(nivelactual==1){
+        game.load.tilemap('map', '../assets/level2.csv');
+        numeroFantasmas = numeroFantasmas +1;
+    }
+    if(nivelactual==2){
+        game.load.tilemap('map', '../assets/level3.csv');
+        numeroFantasmas = numeroFantasmas +2;
+    }
+
 
     game.load.image('tileset', '../assets/tileset.png');
 
@@ -152,14 +154,14 @@ function create() {
         fill: '#fff'
     });
 }
-
+var intervalo;
 var poderes=false;
 function update() {
 
     //Colisiones
     //Tiempo del poder.
 
-    if(((score>2000) && (nivelactual==0)) || ((score>4500) && (nivelactual==1))){
+    if(((score>2000) && (nivelactual==0)) || ((score>4500) && (nivelactual==1)) || ((score>9000) && (nivelactual==2))){
         game.paused=true;
         textoGanar = game.add.text(50, 350, 'Has ganado este nivel, preparate para el siguiente', {
             fontSize: '25px',
@@ -174,11 +176,11 @@ function update() {
                     array[i].level=array[i].level+1;
                     array[i].score=array[i].score+score;
                 }
-                if((array[i].level>=2) && (array[i].nickname==jugadorActual)){
+                if((array[i].level>=3) && (array[i].nickname==jugadorActual)){
                     
                     $(".final").append("<h1>Felicidades te has pasado el juego</h1> <br><a href='../index.html'> Volver a la pagina principal </a>");
-                    array[i].level=array[i].level+1;
                     array[i].score=array[i].score+score;
+                    localStorage.setItem( "jugador",JSON.stringify(array));
                     return;
                 }
             }
@@ -189,12 +191,13 @@ function update() {
         },4000);
     }
     if(poderes==true){
-        setTimeout(function(){
+        intervalo=setTimeout(function (){
             poderes=false;
             fantasmas.forEach(e => {
                 e.animations.play('malo');
             });
         }, 10000);
+        
     }
     game.physics.arcade.overlap(comecocos, bolasPoder, poder, null, this);
     game.physics.arcade.collide(comecocos, layer);
@@ -266,6 +269,9 @@ function poder(come, bol) {
 
     if(!poderes){
         bol.kill();
+        if(intervalo!=null){
+            clearInterval(intervalo);
+        }
         fantasmas.forEach(e => {
             e.animations.play('bueno');
         });
