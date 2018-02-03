@@ -1,0 +1,108 @@
+#comecocos {
+    text-align: center;
+    color: yellow;
+}
+
+#botones {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contenedor {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+#info {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+}
+
+#infouno {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+}
+
+#infodos {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+}
+
+#controles {
+    background-color: black;
+}
+
+#bocadillo {
+    margin-top: 20px;
+    background-color: #A9A9A9;
+    border-radius: 2em;
+    height: 200px;
+}
+
+#bocadillodos {
+    background-color: #A9A9A9;
+    border-radius: 2em;
+    height: 550px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    position: relative;
+    left: 30%;
+}
+
+#imgdos {
+    position: relative;
+    left: 40%;
+}
+
+#puntuaciones {
+    background-color: #A9A9A9;
+    border-radius: 2em;
+    height: 80%;
+    margin-bottom: 10px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+form {
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+#botonjugar{
+    position: relative;
+    left: -100px;
+}
+
+#boton{
+    width: 50%;
+}
+
+#puntuaciones>h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#contenedor {
+    margin: 0 auto;
+}
+
+canvas{
+    padding-top: 100px;
+    margin: 0 auto;
+}
+
+#nav{
+    position: absolute;
+    left: 80%;
+    top: 20px;
+}

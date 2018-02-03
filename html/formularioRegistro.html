@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <form onsubmit="compruebaRegistro()" action="../index.html">
+            <div class="col-md-8">
+                <div class="form-group ">
+                    <label for="nickname">Nickname</label>
+                    <input type="text" class="form-control" id="nickname" required maxlength="15" aria-describedby="emailHelp" placeholder="Enter nickname">
+                    <small class="form-text text-muted">El nick no puede ser mayor de 15 caracteres.</small>
+                </div>
+                <div class="form-group">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="Password" class="form-control" id="contraseñados" placeholder="contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+        </div>
+
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="../js/application.js"></script>
+</body>
+
+</html>
